@@ -51,7 +51,7 @@ def open_sessionWindow_fx(window, dimensions):
 
 	vid_player = TkinterVideo(scaled=True, master=sessionWindow)
 	vid_player.pack() # pack(expand=True, fill="both")
-	vid_player.load("img/avi.mp4")
+	vid_player.load("avi.mp4")
 	vid_player.play()
 
 	txt_below_vid = """ Forward / Backward for Present / Absent """
@@ -59,8 +59,8 @@ def open_sessionWindow_fx(window, dimensions):
 	Label_below_vid.config(bg = "white", fg = "black")
 	Label_below_vid.pack()
 
-	sb = Scrollbar(sessionWindow)
-	sb.pack(side = RIGHT, fill = Y)
+	# sb = Scrollbar(sessionWindow)
+	# sb.pack(side = RIGHT, fill = Y)
 
 	sessionWindow.protocol("WM_DELETE_WINDOW", lambda: toggle_fx(o = startSession_btn, window = sessionWindow))
 
@@ -80,7 +80,7 @@ intro_message.place(x = 10, y = 10)
 # intro_pic = ImageTk.PhotoImage(intro_pic)
 # pic_label = Label(root, image = intro_pic)
 
-intro_pic = Image.open("img/test.png")
+intro_pic = Image.open("test.png")
 intro_pic = intro_pic.resize((200,260))
 intro_pic = ImageTk.PhotoImage(intro_pic)
 pic_label = Label(root, image = intro_pic)
